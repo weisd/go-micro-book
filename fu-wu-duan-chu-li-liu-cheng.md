@@ -22,7 +22,7 @@
 * transport.Socket.Recv 接收 transport.Message
 * 如果配置waitGroup（wg）, wg计数+1
 * 记录header 到metadata
-* 记录local/remote ip 到metadata
+* 记录local/remote ip 到metadata,所以想取客户端ip的话，从metadata里取就行了_
 * 生成context,附带metadata
 * 如果配置了 timeout 参数 ，生成timeout的context
 * 根据content-type取到codec, 如果content-type未设置，默认application/protobuf
