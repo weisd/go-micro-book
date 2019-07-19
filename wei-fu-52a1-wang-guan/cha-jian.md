@@ -78,3 +78,5 @@ type Manager interface {
 // Its the responsibility of the Handler to call the next http.Handler in the chain.
 type Handler func(http.Handler) http.Handler
 ```
+
+只要实现了 Plugin接口，就可以通过Register方法注册
