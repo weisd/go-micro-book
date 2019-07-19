@@ -15,6 +15,7 @@
 更多插件，看https://github.com/micro/go-plugins/tree/master/micro
 
 ## 使用
+
 使用插件，只要在init方法中，注册需要的插件就可以了
 
 示例
