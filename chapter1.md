@@ -1,14 +1,15 @@
 # go-micro 框架结构
 
 
-框架组件
+### 框架组件
+整个rpc框架由以下部分组成
 
 - Cmd  
     解析命令行参数、环境变量，定义启动命令
 - Registry
-    服务注册发现
+    服务注册发现，支持mdns、consul、etcd、memory、gossip、kubernetes、nats、zookeeper，默认使用mdns
 - Selector
-    服务负载均衡策略，目录有Random、RoundRobin，默认使用Random
+    服务负载均衡策略，支持Random、RoundRobin，默认使用Random
 - Transport
     服务通信传输方式,支持http、tcp、udp、grpc、nats、rabbitmq，默认使用http
 - Codec
@@ -20,4 +21,10 @@
 - Broker
     消费订阅组件，支持http、nats、grpc、kafka、nsq、redis、rabbitmq等，默认使用http
     
+    
+### 流程
+    
+#### rpc服务端启动流程
+    
+    - cmd解析命令行、环境变量参数，确定使用的client、server、registry、transport、broker,以及一些自定义参数
     
