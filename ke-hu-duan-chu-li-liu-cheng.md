@@ -27,7 +27,7 @@ response, err := userClient.Hello(context.Background(), &hello.Request{
  - 调用前已知service名，方法名
  - 实例化client.Request, response
  - 调用client.Call方法
- - 从 Registry中取service名对应的服务器节点列表
+ - 从 Registry中取service名对应的服务器节点列表, 请求后会有个cache把结果缓存、并watch变化自动更新
  - 调用Selector.Select方法选择需要连接的服务器节点，默认使用Random策略
  - 如果未找到对应serive的节点，返回not found error
  - 生成一个带timeout的context
