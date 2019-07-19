@@ -80,3 +80,20 @@ type Handler func(http.Handler) http.Handler
 ```
 
 只要实现了 Plugin接口，就可以通过Register方法注册
+
+## 子命令插件
+
+所有了作用在web-server上的插件，可以指定插件只作用在指定子命令上，实现一样，只是注册的时候调用子命令的注册方法就行了
+
+例如只添加gzip到micro api 上
+
+```
+import (
+ "github.com/micro/micro/api"
+ "github.com/micro/go-plugins/micro/gzip"
+ )
+
+func init(){
+ api.Register(gzip.NewPlugin())
+
+}
