@@ -13,9 +13,8 @@
   - 消息发布订阅
 - 配置中心
   - config
-  
 * 服务治理
-  * metrics 统计
+  * metrics 统计报警
   * logger  日志
   * tracing 跟踪
   * breaker 熔断
