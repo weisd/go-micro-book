@@ -79,7 +79,7 @@ micro的网关本质就是个web-server,使用github.com/gorilla/mux路由，各
 
 规则如下
 
-RPC   
+RPC  
  一个service名为 go.micro.api.greeter 方法名为 Greeter.Hello 解析规则如下
 
 | Path | Service | Method |
@@ -90,9 +90,7 @@ RPC
 | /foo/v1/bar-baz | go.micro.api.foo | V1.BarBaz |
 | /foo/bar/baz/cat | go.micro.api.foo.bar | Baz.Cat |
 
-
-
-带有version的api URL 
+带有version的api URL
 
 | Path | Service | Method |
 | :--- | :--- | :--- |
@@ -102,13 +100,7 @@ RPC
 | /v2/foo/bar | go.micro.api.v2.foo | Foo.Bar |
 | /v2/foo/bar/baz | go.micro.api.v2.foo | Bar.Baz |
 
-
-
-
-
-
-
-Proxy 代码解析规则 
+Proxy 代码解析规则
 
 反向代码，只解析出service名
 
