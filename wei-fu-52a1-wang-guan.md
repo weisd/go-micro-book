@@ -56,6 +56,14 @@ micro的网关本质就是个web-server,使用github.com/gorilla/mux路由，各
 * 解析规则: path
 * 配置: --handler=web 或 环境变量 MICRO\_API\_HANDLER=web
 
+
+#### api示例
+
+```
+curl "http://localhost:8080/greeter/say/hello?name=John"
+```
+
+
 ### RPC endpont
 
 * Content-Type: application/json or application/x-www-form-urlencoded
@@ -64,7 +72,8 @@ micro的网关本质就是个web-server,使用github.com/gorilla/mux路由，各
 * 转换格式: request请求所需参数，service、method、request
 * 解析规则: body
 
-  实例：
+#### rpc 示例
+  示例 post form：
 
   ```
   curl -d 'service=go.micro.srv.greeter' \
@@ -72,6 +81,14 @@ micro的网关本质就是个web-server,使用github.com/gorilla/mux路由，各
      -d 'request={"name": "Bob"}' \
      http://localhost:8080/rpc
   ```
+
+  示例 post json
+  ```
+  curl -H 'Content-Type: application/json' \
+     -d '{"service": "go.micro.srv.greeter", "method": "Say.Hello", "request": {"name": "John"}}' \
+     http://localhost:8080/rpc
+  ```
+
 
 ## 解析规则
 
