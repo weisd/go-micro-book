@@ -54,17 +54,16 @@ func init() {
 // Plugin is the interface for plugins to micro. It differs from go-micro in that it's for
 // the micro API, Web, Sidecar, CLI. It's a method of building middleware for the HTTP side.
 type Plugin interface {
-    // Global Flags
+    // 添加 Flags
     Flags() []cli.Flag
-    // Sub-commands
+    // 添加 子命令 Sub-commands
     Commands() []cli.Command
-    // Handle is the middleware handler for HTTP requests. We pass in
-    // the existing handler so it can be wrapped to create a call chain.
+    // Handle is the middleware handler for HTTP requests. 
+    // http请求中间件，处理逻辑一般都写在这
     Handler() Handler
-    // Init called when command line args are parsed.
-    // The initialised cli.Context is passed in.
+    // 初始化方法，会从cli中解析出所有参数
     Init(*cli.Context) error
-    // Name of the plugin
+    // 插件的名称
     String() string
 }
 
