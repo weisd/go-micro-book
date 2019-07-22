@@ -43,9 +43,7 @@ type App struct {
 	// 程序执行结束后执行的操作，程序panic也会执行after
 	After AfterFunc
 
-	// The action to execute when no subcommands are specified
-	// Expects a `cli.ActionFunc` but will accept the *deprecated* signature of `func(*cli.Context) {}`
-	// *Note*: support for the deprecated `Action` signature will be removed in a future version
+	// 没有子命令时执行的操作
 	Action interface{}
 
 	// 命令不存在时执行
