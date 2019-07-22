@@ -75,6 +75,7 @@ type App struct {
 }
 ```
 
+Commend的属性字段跟App差不多，就不列出了，
 
 #### 执行过程
 
