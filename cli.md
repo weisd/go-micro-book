@@ -74,6 +74,9 @@ type App struct {
 }
 ```
 
+
+执行过程
+
 - 解析os.Args,环境变量, 得到执行程序名称，子命令，参数，环境变量优先级大于flag
 - 解析Flags定义的参数，如果多出未定义的参数会提示错误，得到一个flagSet
 - 如果Before定义，执行Before
