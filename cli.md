@@ -6,8 +6,8 @@ cli 是一个命令行工具
 
 ```
 
-// App is the main structure of a cli application. It is recommended that
-// an app be created with the cli.NewApp() function
+
+// App 属性字段
 type App struct {
 	// 程序的名称，默认取path.Base(os.Args[0]) 执行路径的文件名
 	Name string
