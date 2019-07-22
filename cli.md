@@ -90,6 +90,9 @@ Command的执行过程与app的执行过程一样
 
 
 #### 一个简单例子
+
+项目中常常只用到flag,commands,ation属性
+
 todo
 
 #### 一个完整属性例子
