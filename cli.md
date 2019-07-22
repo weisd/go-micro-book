@@ -4,12 +4,13 @@ cli 是一个命令行工具
  - 解析参数
  - 添加命令
 
-```
-
 
 
 ### App 属性字段
 
+```
+
+### App 属性字
 type App struct {
 	// 程序的名称，默认取path.Base(os.Args[0]) 执行路径的文件名
 	Name string
